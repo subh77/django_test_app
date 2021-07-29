@@ -67,3 +67,7 @@ def counter(request):
     words = request.POST["words"]
     word_counter = len(words.split())
     return render(request, "counter.html", {"count": word_counter})
+
+
+def post(request, pk):
+    return render(request, "post.html", {"pk": pk})
